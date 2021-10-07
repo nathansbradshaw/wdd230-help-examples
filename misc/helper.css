@@ -1,0 +1,99 @@
+/* This file is for formating that isn't related to examples*/
+.github-button {
+   position: fixed;
+   right: 0; 
+   bottom: 0; 
+   padding: 1rem;
+   font-size: 1rem;
+   font-size: 30px;
+   -webkit-font-smoothing: antialiased;
+   text-align: center;
+   font-weight: 500;
+   /* center text */
+   border-radius: 3rem;
+   margin: 2rem;
+   text-align: center;
+   background-color: red;
+   background-image: -webkit-linear-gradient(92deg,red,yellow);
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    -webkit-animation: hue 2s infinite linear;
+    cursor: pointer;
+ }
+
+ .github-button:hover{
+    background-color: bisque;
+    box-shadow: 2px 2px 2px 2px rgb(22, 19, 19);
+ }
+
+/* Thank you https://codepen.io/OscarTBeamish/pen/Ojxdzb */
+/* mixins */
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+/* main style */
+html, body {
+  background-color: rgb(255, 255, 255);
+}
+h1 {
+  font-size: 90px;
+  font-family: 'Zilla Slab Highlight', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  font-weight: 500;
+  /* center text */
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  color: red;
+  background-image: -webkit-linear-gradient(92deg,red,yellow);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+/* top title */
+h2 {
+  font-size:70px;
+	font-weight:300;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  /* center text */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  color: red;
+  background-image: -webkit-linear-gradient(92deg,red,yellow);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+  }
+/* bottom title */
+h3 {
+  font-size:70px;
+	font-weight:300;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  /* center text */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  color: red;
+  background-image: -webkit-linear-gradient(92deg,red,yellow);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
