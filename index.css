@@ -1,0 +1,130 @@
+/* Here is the page structure for this example */
+/* 
+   <header> This holds all items that will be at the top of the page
+      <div class="navbar"> This is the main navigation bar, including the menu and the logo
+         <div class="logo"> This is the logo for the navbar
+            <a id=menu-icon> This is the hamburger Icon
+         <nav class="main-nav" This is our nav items
+*/
+
+
+/* NAVBAR STYLES */
+.navbar {
+  /* min-height: 70px; */
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+.main-nav {
+  margin-top: 5px;
+  background-color: #061525;
+  /* This hides the menu until the menu button is clicked */
+  max-height: 0px;
+  overflow: hidden;
+  /* These are used to make a simple transition animation */
+  -moz-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+
+.logo,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-nav a {
+  color: #fdfeff;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.main-nav li {
+  padding: 1rem;
+}
+/* By floating the icon to the right we can easily make it appear to the right */
+#menu-icon {
+  float: right;
+  cursor: pointer;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#menu-icon:hover {
+ background-color: rgba(24, 26, 26, 0.055);
+}
+.logo {
+  font-size: 1.45em;
+  padding: 1rem;
+}
+
+/* Expanded is the toggled class. IT allows the navbar to show the contents of the hamburger menu when pushed */
+.expanded {
+  max-height: 25em;
+}
+
+/* This makes the navbar stick to the top of the screen */
+.sticky {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+/* Relative makes it so the navbar doesn't push content down when you open the hamburger menu */
+.relative {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+/* This is what your medium CSS file will do */
+@media (min-width: 900px) {
+  /* We want the navbar, main-nav and <ul> to have flex */
+  .navbar,
+  .main-nav,
+  .main-nav ul {
+    display: flex;
+  }
+  .main-nav a {
+    color: #000e1b;
+  }
+
+  .main-nav {
+    width: 100%;
+    max-height: none;
+    background-color: #f4f4f4;
+
+  /* This puts the two <ul> to either side of their container */
+    justify-content: space-between;
+  }
+
+  /* Hide the menu icon on tablet and desktop */
+  #menu-icon {
+    display: none;
+  }
+}
+
+/* This is what the large.css does */
+@media (min-width: 1025px) {
+  .navbar {
+    flex-direction: row;
+    /* justify-content: space-between; */
+  }
+}
